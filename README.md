@@ -5,3 +5,18 @@ This project showcases my design of a generic RAM block by first creating a smal
 Beyond performance, building a larger RAM from smaller blocks provides greater control and modularity in the system architecture. This structure makes the design easier to maintain and extend, and it enables advanced features such as memory banking, parallel access, and custom read/write rules that would be more difficult to implement with a single monolithic RAM block.
 
 The project is fully implemented in VHDL and designed in a generic, reusable form. Its architecture makes it suitable for integration into larger digital systems, including microprocessor designs such as a RISC-V architecture. This ensures that the memory block can be directly connected to standard bus interfaces and used as part of a complete embedded processing system.
+
+## Quardram 
+The core small RAM block used as the basic memory element
+
+## Quadram_TB 
+The testbench for the Quadram module, used to verify the functionality of the small RAM block
+
+## Decoder
+The decoder responsible for selecting which RAM block is active inside the full memory structure
+
+## RAM
+The top-level memory file that instantiates multiple Quadram blocks and connects them through the decoder to build the complete RAM
+
+## Final_TB
+The testbench for the full RAM system described in the RAM file, validating the behavior of the assembled memory architecture
