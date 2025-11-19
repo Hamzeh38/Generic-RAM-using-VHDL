@@ -1,5 +1,3 @@
-# Generic-RAM-using-VHDL
-
 This project showcases my design of a generic RAM block by first creating a small memory module and then instantiating it multiple times to construct the full memory. This approach leads to improved performance depending on the target hardware. On FPGAs, for example, memory resources come in fixed-size blocks, so using smaller RAM elements allows the design to map memory more efficiently with minimal waste. It can also reduce routing congestion since each module is physically smaller and easier for the tools to place, which can contribute to higher achievable clock frequencies. Additionally, by activating only one memory bank at a time, we reduce unnecessary switching activity, improving overall power efficiency.
 
 Beyond performance, building a larger RAM from smaller blocks provides greater control and modularity in the system architecture. This structure makes the design easier to maintain and extend, and it enables advanced features such as memory banking, parallel access, and custom read/write rules that would be more difficult to implement with a single monolithic RAM block.
